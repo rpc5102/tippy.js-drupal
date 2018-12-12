@@ -1,5 +1,5 @@
 {
-    "name": "drupal/tippy",
+    "name": "rpc5102/tippy",
     "description": "A highly customizable vanilla JS tooltip & popover library for Drupal 8.",
     "version": "0.1.0",
     "type": "drupal-module",
