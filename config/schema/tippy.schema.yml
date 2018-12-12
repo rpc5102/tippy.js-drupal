@@ -1,0 +1,13 @@
+tippy.settings:
+  type: config_object
+  label: 'Tippy.js settings'
+  mapping:
+    method:
+      type: string
+      label: 'Method used for delivering Tippy.js'
+    use_cdn:
+      type: boolean
+      label: 'Use CDN to serve Tippy.js'
+    external_svg_location:
+      type: string
+      label: 'Location of the external CDN for Tippy.js'

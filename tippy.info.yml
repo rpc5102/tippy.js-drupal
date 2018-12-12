@@ -1,0 +1,10 @@
+name: 'Tippy.js'
+type: module
+description: 'A highly customizable vanilla JS tooltip & popover library.'
+
+# core: 8.x
+configure: tippy.admin_settings
+
+version: '8.x-1.0'
+core: '8.x'
+project: 'tippy'

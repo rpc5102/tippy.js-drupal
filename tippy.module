@@ -1,0 +1,88 @@
+<?php
+
+/**
+ * @file
+ * Drupal integration with Tippy.js, the vanilla JS tooltip & popover library.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Link;
+use Symfony\Component\Yaml\Yaml;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\TypedData\Plugin\DataType\ItemList;
+
+/**
+ * Implements hook_help().
+ */
+function tippy_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.tippy':
+      return '<p>' . t('<a href=":tippy_url">Tippy.js</a> is a highly customizable vanilla JS tooltip & popover library. For more information on how to use Tippy.js, see the <a href=":tippy_getting_started">Getting Started</a> guide.', [
+        ':tippy_url' => 'https://atomiks.github.io/tippyjs/',
+        ':tippy_getting_started' => 'https://atomiks.github.io/tippyjs/#getting-started',
+      ]) . '</p>';
+  }
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function tippy_library_info_alter(&$libraries, $extension) {
+  // Modify the Tippy.js library to use external file if user chose.
+  if ($extension == 'tippy') {
+    // Load the configuration settings.
+    $configuration_settings = \Drupal::config('tippy.settings');
+
+    // Have to modify the library if the user is using a CDN.
+    if ($configuration_settings->get('use_cdn')) {
+      // Modify the library.
+      $librarySettings = array_shift($libraries['tippy.js']['js']);
+      $libraries['tippy.js']['js'] = [
+        $configuration_settings->get('external_location') => $librarySettings,
+      ];
+    }
+  }
+}
+
+/**
+ * Check to make sure that Tippy.js is installed.
+ *
+ * @return bool
+ *   Flag indicating if the library is properly installed.
+ */
+function tippy_check_installed() {
+  // Load the configuration settings.
+  $configuration_settings = \Drupal::config('tippy.settings');
+
+  // Throw error if library file not found.
+  if ($configuration_settings->get('use_cdn')) {
+    return !empty($configuration_settings->get('external_location'));
+  } else {
+    $tippy_library = \Drupal::service('library.discovery')->getLibraryByName('tippy', 'tippy.js');
+    return file_exists(DRUPAL_ROOT . '/' . $tippy_library['js'][0]['data']);
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Purposefully only load on page requests and not hook_init(). This is
+ * required so it does not increase the bootstrap time of Drupal when it isn't
+ * necessary.
+ */
+function tippy_page_attachments(array &$page) {
+  // Load the configuration settings.
+  $configuration_settings = \Drupal::config('tippy.settings');
+
+  // Throw error if library file not found.
+  if (!tippy_check_installed()) {
+    \Drupal::messenger()->addWarning(t('The Tippy.js library could not be found. Please verify Tippy.js is installed correctly or that the CDN has been activated and properly configured. Please see the @adminPage and the Tippy.js module README file for more details.', [
+      '@adminPage' => Link::createFromRoute(t('admin page'), 'tippy.admin_settings')->toString(),
+    ]));
+    return;
+  }
+
+  // Attach the main library.
+  $page['#attached']['library'][] = 'tippy/tippy.js';
+}

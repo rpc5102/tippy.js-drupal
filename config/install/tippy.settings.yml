@@ -1,0 +1,2 @@
+use_cdn: true
+external_location: 'https://unpkg.com/tippy.js@3.3.0/dist/tippy.all.min.js'

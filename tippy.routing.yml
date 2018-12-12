@@ -1,0 +1,7 @@
+tippy.admin_settings:
+  path: '/admin/config/content/tippy'
+  defaults:
+    _form: '\Drupal\tippy\Form\SettingsForm'
+    _title: 'Tippy.js settings'
+  requirements:
+    _permission: 'administer site configuration'

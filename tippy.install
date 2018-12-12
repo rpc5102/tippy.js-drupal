@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Requirements page for Tippy.js.
+ */
+
+use Drupal\Core\Link;
+
+/**
+ * Implements hook_requirements().
+ */
+function tippy_requirements($phase) {
+  $requirements = [];
+
+  // Report the version of Tippy.js.
+  if ($phase == 'runtime') {
+    $requirements['tippy'] = [
+      'title' => t('Tippy.js v3'),
+    ];
+
+    // Load the configuration settings.
+    $configuration_settings = \Drupal::config('tippy.settings');
+
+    // Check if Tippy.js is installed.
+    if (tippy_check_installed()) {
+      // Get the version.
+      if ($configuration_settings->get('use_cdn')) {
+        $version = 'CDN';
+      } else {
+        $version = 'Local';
+      }
+      $requirements['tippy']['severity'] = REQUIREMENT_OK;
+      $requirements['tippy']['value'] = t('Tippy.js library is installed. Using %version version. (@moreInfoLink)', [
+        '%version' => $version,
+        '@moreInfoLink' => Link::createFromRoute(t('more information'), 'tippy.admin_settings')->toString(),
+      ]);
+    }
+    else {
+      $requirements['tippy']['severity'] = REQUIREMENT_ERROR;
+      $requirements['tippy']['value'] = t('Not installed');
+      $requirements['tippy']['description'] = t('The Tippy.js library could not be found. Please verify Tippy.js is installed correctly or that the CDN has been activated and properly configured. Please see the @adminPage and the Tippy.js module README file for more details.', [
+        '@adminPage' => Link::createFromRoute(t('admin page'), 'tippy.admin_settings')->toString(),
+      ]);
+    }
+  }
+
+  return $requirements;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function tippy_uninstall() {
+  // Delete set variables.
+  $query = \Drupal::database()->delete('config');
+  $query->condition('name', 'tippy.settings');
+  $query->execute();
+  $query = \Drupal::database()->delete('key_value');
+  $query->condition('name', 'tippy');
+  $query->execute();
+}

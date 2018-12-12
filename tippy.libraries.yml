@@ -1,0 +1,10 @@
+# atomiks.github.io/tippyjs
+tippy.js:
+  remote: https://unpkg.com/tippy.js@3.3.0/dist/tippy.all.min.js
+  license: &tippy_license
+    name: MIT
+    url: https://github.com/atomiks/tippyjs/blob/master/LICENSE
+    gpl-compatible: true
+  version: 3.3.0
+  js:
+    /libraries/tippy.js/dist/tippy.all.min.js: { minified: true, attributes: { defer: true, async: true} }

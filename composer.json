@@ -1,0 +1,29 @@
+{
+    "name": "drupal/tippy",
+    "description": "A highly customizable vanilla JS tooltip & popover library for Drupal 8.",
+    "version": "0.1.0",
+    "type": "drupal-module",
+    "keywords": [
+        "Drupal 8",
+        "Module",
+        "Accessibility",
+        "Popovers",
+        "Tooltips"
+    ],    
+    "license": "GPL-2.0",
+    "minimum-stability": "dev",
+    "homepage": "https://git.psu.edu/rpc5102/tippy.git",
+    "authors": [
+        {
+            "name": "ROBERT PATRICK CAREY III",
+            "email": "rpc5102@psu.edu"
+        },
+        {
+            "name": "University of Michigan Library",
+            "homepage": "https://github.com/mlibrary"
+        }
+    ],
+    "support": {
+        "issues": "https://git.psu.edu/rpc5102/tippy/issues"
+    }
+}
