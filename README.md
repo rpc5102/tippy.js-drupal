@@ -30,7 +30,7 @@ Installation
 
 Usage
 ---------------------
-For examples on how to use and style Tippy tooltips, see the [Getting Started](https://atomiks.github.io/tippyjs/getting-started) section of Atomiks site or checkout the [GitHub Repository](https://github.com/atomiks/tippyjs) for examples.
+For examples on how to use and style Tippy tooltips, see the [Getting Started](https://atomiks.github.io/tippyjs/getting-started) section of the official site or checkout the [GitHub Repository](https://github.com/atomiks/tippyjs) for examples.
 
 
 Credits
