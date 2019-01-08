@@ -1,7 +1,7 @@
 @tippy.js/drupal
 ---------------------
 
-Simple Drupal 8 wrapper to for [Tippy.js](https://github.com/atomiks/tippyjs)
+Simple Drupal 8 wrapper for [Tippy.js](https://github.com/atomiks/tippyjs)
 
 Introduction
 ---------------------
