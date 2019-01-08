@@ -1,17 +1,15 @@
-CONTENTS OF THIS FILE
+@tippy.js/drupal
 ---------------------
- * Introduction
- * Installation
- * Usage
- * Credits
 
-INTRODUCTION
+Simple Drupal 8 wrapper to for [Tippy.js](https://github.com/atomiks/tippyjs)
+
+Introduction
 ---------------------
 
 Tippy.js is a highly customizable vanilla JS tooltip and popover library powered by [Popper.js](https://popper.js.org).
 
 
-INSTALLATION
+Installation
 ---------------------
 
 1. Library Installation:
@@ -30,15 +28,16 @@ INSTALLATION
         - Enable the module at Administer >> Site building >> Modules.
 
 
-USAGE
+Usage
 ---------------------
-For examples on how to use and style Tippy tooltips, see the [Getting Started](https://atomiks.github.io/tippyjs/#getting-started) section of Atomiks site or checkout the [GitHub Repository](https://github.com/atomiks/tippyjs) for examples.
+For examples on how to use and style Tippy tooltips, see the [Getting Started](https://atomiks.github.io/tippyjs/getting-started) section of Atomiks site or checkout the [GitHub Repository](https://github.com/atomiks/tippyjs) for examples.
 
 
-CREDITS
+Credits
 ---------------------
-This module has been ported from the Drupal 8 [FontAwesome](https://www.drupal.org/project/fontawesome). Credit goes out to the **_awesome_** folks below:
+This module has been ported from the Drupal 8 [FontAwesome](https://www.drupal.org/project/fontawesome), credit goes out to the **_awesome_** folks below:
 
+* atomiks https://github.com/atomiks
 * Rob Loach (RobLoach) http://robloach.net
 * Inder Singh (inders) http://indersingh.com | https://www.drupal.org/u/inders
 * Mark Carver https://www.drupal.org/u/mark-carver
