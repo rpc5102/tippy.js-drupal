@@ -35,7 +35,7 @@ For examples on how to use and style Tippy tooltips, see the [Getting Started](h
 
 Credits
 ---------------------
-This module has been ported from the Drupal 8 [FontAwesome](https://www.drupal.org/project/fontawesome), credit goes out to the **_awesome_** folks below:
+This module has been ported from the Drupal 8 [FontAwesome](https://www.drupal.org/project/fontawesome) module, credit goes out to the **_awesome_** folks below:
 
 * atomiks https://github.com/atomiks
 * Rob Loach (RobLoach) http://robloach.net
