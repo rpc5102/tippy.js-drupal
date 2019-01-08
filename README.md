@@ -17,12 +17,12 @@ INSTALLATION
 1. Library Installation:
 
     Place the Tippy.js library from https://atomiks.github.io/tippyjs and inside your Drupal */libraries* folder.
-    
-    The JS file should be at */libraries/tippy.js/dist/tippy.all.min.js*. 
+
+    The JS file should be at */libraries/tippy.js/dist/tippy.all.min.js*.
 
 2. Drupal Install:
     - **Option 1**. Using [Drush](https://github.com/drush-ops/drush#readme)
-    
+
         ```$ drush en tippy```
 
     - **Option 2**. Manual Install
@@ -37,7 +37,7 @@ For examples on how to use and style Tippy tooltips, see the [Getting Started](h
 
 CREDITS
 ---------------------
-This module has been ported from the Drupal 8 [FontAwesome](https://www.drupal.org/project/fontawesome) module by [Bob Carey](https://drupal.org/u/rpc5102). Credit goes out to the **_awesome_** folks below:
+This module has been ported from the Drupal 8 [FontAwesome](https://www.drupal.org/project/fontawesome). Credit goes out to the **_awesome_** folks below:
 
 * Rob Loach (RobLoach) http://robloach.net
 * Inder Singh (inders) http://indersingh.com | https://www.drupal.org/u/inders
