@@ -20,7 +20,7 @@ function tippy_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.tippy':
       return '<p>' . t('<a href=":tippy_url">Tippy.js</a> is a highly customizable vanilla JS tooltip & popover library. For more information on how to use Tippy.js, see the <a href=":tippy_getting_started">Getting Started</a> guide.', [
         ':tippy_url' => 'https://atomiks.github.io/tippyjs/',
-        ':tippy_getting_started' => 'https://atomiks.github.io/tippyjs/#getting-started',
+        ':tippy_getting_started' => 'https://atomiks.github.io/tippyjs/getting-started/',
       ]) . '</p>';
   }
 }
@@ -84,5 +84,6 @@ function tippy_page_attachments(array &$page) {
   }
 
   // Attach the main library.
+  $page['#attached']['library'][] = 'tippy/popper.js';
   $page['#attached']['library'][] = 'tippy/tippy.js';
 }
