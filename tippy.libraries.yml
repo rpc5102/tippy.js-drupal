@@ -5,7 +5,7 @@ popper.js:
     name: MIT
     url: https://github.com/FezVrasta/popper.js/blob/master/LICENSE.md
     gpl-compatible: true
-  version: 1
+  version: 1.14.7
   js:
     https://unpkg.com/popper.js@1/dist/umd/popper.min.js: { type: external, minified: true, attributes: { defer: true, async: true } }
 
@@ -16,7 +16,7 @@ tippy.js:
     name: MIT
     url: https://github.com/atomiks/tippyjs/blob/master/LICENSE
     gpl-compatible: true
-  version: 4.0.0
+  version: 4.0.2
   js:
     /libraries/tippy.js/dist/tippy.all.min.js: { minified: true, attributes: { defer: true, async: true} }
   dependencies:
