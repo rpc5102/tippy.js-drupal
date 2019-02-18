@@ -21,5 +21,35 @@
     ],
     "support": {
         "issues": "https://github.com/rpc5102/tippy.js-drupal/issues"
+    },
+    "repositories": [
+        {
+          "type": "package",
+          "package": {
+              "name": "atomiks/tippyjs",
+              "version": "4.0.2",
+              "type": "drupal-library",
+              "dist": {
+                  "url": "https://registry.npmjs.com/tippy.js/-/tippy.js-4.0.2.tgz",
+                  "type": "tar"
+              }
+          }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "FezVrasta/popper.js",
+                "version": "1.14.7",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://registry.npmjs.com/popper.js/-/popper.js-1.14.7.tgz",
+                    "type": "tar"
+                }
+            }
+        }
+    ],
+    "require": {
+        "atomiks/tippyjs": "^4.0",
+        "FezVrasta/popper.js": "^1.14"
     }
 }
