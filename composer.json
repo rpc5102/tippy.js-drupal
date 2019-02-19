@@ -49,7 +49,7 @@
         }
     ],
     "require": {
-        "atomiks/tippyjs": "^4.0",
-        "FezVrasta/popper.js": "^1.14"
+        "atomiks/tippyjs": "4.0.2",
+        "FezVrasta/popper.js": "1.14.7"
     }
 }
