@@ -21,7 +21,6 @@
     ],
     "support": {
         "issues": "https://github.com/rpc5102/tippy.js-drupal/issues"
-<<<<<<< HEAD
     },
     "repositories": [
         {
@@ -52,7 +51,5 @@
     "require": {
         "atomiks/tippyjs": "^5.0",
         "FezVrasta/popper.js": "^1.15"
-=======
->>>>>>> 5b7264ba4465863324e937ed89aeac4b7f4cf713
     }
 }
