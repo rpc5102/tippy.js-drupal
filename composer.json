@@ -38,7 +38,7 @@
         {
             "type": "package",
             "package": {
-                "name": "FezVrasta/popper.js",
+                "name": "fezvrasta/popper.js",
                 "version": "1.15.0",
                 "type": "drupal-library",
                 "dist": {
@@ -50,6 +50,6 @@
     ],
     "require": {
         "atomiks/tippyjs": "^5.0",
-        "FezVrasta/popper.js": "^1.15"
+        "fezvrasta/popper.js": "^1.15"
     }
 }
