@@ -22,8 +22,8 @@
     "support": {
         "issues": "https://github.com/rpc5102/tippy.js-drupal/issues"
     },
-    "repositories": [
-        {
+    "repositories": {
+        "atomiks.tippyjs": {
           "type": "package",
           "package": {
               "name": "atomiks/tippyjs",
@@ -35,7 +35,7 @@
               }
           }
         },
-        {
+        "fezvrasta.popperjs": {
             "type": "package",
             "package": {
                 "name": "fezvrasta/popper.js",
@@ -47,9 +47,9 @@
                 }
             }
         }
-    ],
+    },
     "require": {
-        "atomiks/tippyjs": "^5.0",
-        "fezvrasta/popper.js": "^1.15"
+        "atomiks/tippyjs": "*",
+        "fezvrasta/popper.js": "*"
     }
 }
