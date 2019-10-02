@@ -16,7 +16,7 @@ function tippy_requirements($phase) {
   // Report the version of Tippy.js.
   if ($phase == 'runtime') {
     $requirements['tippy'] = [
-      'title' => t('Tippy.js v4'),
+      'title' => t('Tippy.js v5'),
     ];
 
     // Load the configuration settings.
@@ -75,6 +75,24 @@ function tippy_update_8101() {
   $config->save(TRUE);
 
   $message = "Tippy: Updated to v4 CDN";
+
+  return $message;
+}
+
+/**
+ * Implements hook_update().
+ */
+function tippy_update_8102() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('tippy.settings');
+
+  if($config->get('use_cdn')){
+    $config->set('external_location', 'https://unpkg.com/tippy.js@5');
+  }
+
+  $config->save(TRUE);
+
+  $message = "Tippy: Updated to v5 CDN";
 
   return $message;
 }

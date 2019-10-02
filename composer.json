@@ -27,10 +27,10 @@
           "type": "package",
           "package": {
               "name": "atomiks/tippyjs",
-              "version": "4.0.2",
+              "version": "5.0.1",
               "type": "drupal-library",
               "dist": {
-                  "url": "https://registry.npmjs.com/tippy.js/-/tippy.js-4.0.2.tgz",
+                  "url": "https://registry.npmjs.com/tippy.js/-/tippy.js-5.0.1.tgz",
                   "type": "tar"
               }
           }
@@ -39,17 +39,17 @@
             "type": "package",
             "package": {
                 "name": "FezVrasta/popper.js",
-                "version": "1.14.7",
+                "version": "1.15.0",
                 "type": "drupal-library",
                 "dist": {
-                    "url": "https://registry.npmjs.com/popper.js/-/popper.js-1.14.7.tgz",
+                    "url": "https://registry.npmjs.com/popper.js/-/popper.js-1.15.0.tgz",
                     "type": "tar"
                 }
             }
         }
     ],
     "require": {
-        "atomiks/tippyjs": "^4.0",
-        "FezVrasta/popper.js": "^1.14"
+        "atomiks/tippyjs": "^5.0",
+        "FezVrasta/popper.js": "^1.15"
     }
 }
