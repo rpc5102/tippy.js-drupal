@@ -47,9 +47,5 @@
                 }
             }
         }
-    },
-    "require": {
-        "atomiks/tippyjs": "*",
-        "fezvrasta/popper.js": "*"
     }
 }
