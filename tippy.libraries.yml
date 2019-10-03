@@ -7,7 +7,7 @@ popper.js:
     gpl-compatible: true
   version: 1.15.0
   js:
-    https://unpkg.com/popper.js@1: { type: external, minified: true, attributes: { defer: true, async: true } }
+    https://unpkg.com/popper.js@1: { type: external, minified: true, attributes: { defer: false, async: false } }
 
 # atomiks.github.io/tippyjs
 tippy.js:
