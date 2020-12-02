@@ -18,6 +18,13 @@ tippy.js:
     gpl-compatible: true
   version: 5.0.1
   js:
-    https://unpkg.com/tippy.js@5: { type: external, minified: true, attributes: { defer: true, async: true } }
+    https://unpkg.com/tippy.js@5: { type: external, minified: true, attributes: { defer: false, async: false } }
   dependencies:
     - tippy/popper.js
+
+# atomiks.github.io/tippyjs
+auto-init:
+  js:
+    js/auto-init.js: { minified: false, attributes: { defer: true, async: true } }
+  dependencies:
+    - tippy/tippy.js

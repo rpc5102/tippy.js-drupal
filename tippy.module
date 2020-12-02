@@ -86,4 +86,8 @@ function tippy_page_attachments(array &$page) {
   // Attach the main library.
   $page['#attached']['library'][] = 'tippy/popper.js';
   $page['#attached']['library'][] = 'tippy/tippy.js';
+
+  if($configuration_settings->get('auto_init')) {
+    $page['#attached']['library'][] = 'tippy/auto-init';
+  }
 }

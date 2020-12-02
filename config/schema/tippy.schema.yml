@@ -8,6 +8,9 @@ tippy.settings:
     use_cdn:
       type: boolean
       label: 'Use CDN to serve Tippy.js'
+    auto_init:
+      type: boolean
+      label: 'Initialize tooltips on pageload'
     external_svg_location:
       type: string
       label: 'Location of the external CDN for Tippy.js'

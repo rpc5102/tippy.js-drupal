@@ -1,2 +1,3 @@
 use_cdn: true
+auto_init: true
 external_location: 'https://unpkg.com/tippy.js@5'

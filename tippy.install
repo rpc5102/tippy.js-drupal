@@ -96,3 +96,21 @@ function tippy_update_8102() {
 
   return $message;
 }
+
+/**
+ * Implements hook_update().
+ */
+function tippy_update_8103() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('tippy.settings');
+
+  if(!$config->get('auto_init')){
+    $config->set('auto_init', 'false');
+  }
+
+  $config->save(TRUE);
+
+  $message = "Tippy: Added new config item 'autoinit'";
+
+  return $message;
+}

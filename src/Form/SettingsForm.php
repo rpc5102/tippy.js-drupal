@@ -78,6 +78,12 @@ class SettingsForm extends ConfigFormBase {
         '#description' => $this->t('Checking this box will cause the Tippy.js library to be loaded from the given source rather than from the local library file.'),
         '#default_value' => $tippy_config->get('use_cdn'),
       ],
+      'auto_init' => [
+        '#type' => 'checkbox',
+        '#title' => $this->t('Auto-initialize'),
+        '#description' => $this->t('Checking this box will run <code>tippy(\'[data-tippy-content]\');</code> on pageload.'),
+        '#default_value' => $tippy_config->get('auto_init'),
+      ],
       'external_location' => [
         '#type' => 'textfield',
         '#title' => $this->t('External File Location'),
@@ -133,6 +139,7 @@ class SettingsForm extends ConfigFormBase {
     // Save the updated settings.
     $this->config('tippy.settings')
       ->set('use_cdn', $values['use_cdn'])
+      ->set('auto_init', $values['auto_init'])
       ->set('external_location', (string) $values['external_location'])
       ->save();
 
