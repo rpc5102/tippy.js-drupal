@@ -126,7 +126,7 @@ class SettingsForm extends ConfigFormBase {
     $this->libraryDiscovery->clearCachedDefinitions();
 
     // Set external file defaults.
-    $default_location = 'https://unpkg.com/tippy.js@5';
+    $default_location = 'https://unpkg.com/tippy.js@6';
 
     // Use default values if CDN is checked and the locations are blank.
     if ($values['use_cdn']) {

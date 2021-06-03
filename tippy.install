@@ -114,3 +114,21 @@ function tippy_update_8103() {
 
   return $message;
 }
+
+/**
+ * Implements hook_update().
+ */
+function tippy_update_8104() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('tippy.settings');
+
+  if($config->get('use_cdn')){
+    $config->set('external_location', 'https://unpkg.com/tippy.js@6');
+  }
+
+  $config->save(TRUE);
+
+  $message = "Tippy: Updated to v6 CDN";
+
+  return $message;
+}
