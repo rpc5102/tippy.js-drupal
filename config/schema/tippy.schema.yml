@@ -11,6 +11,6 @@ tippy.settings:
     auto_init:
       type: boolean
       label: 'Initialize tooltips on pageload'
-    external_svg_location:
+    external_location:
       type: string
       label: 'Location of the external CDN for Tippy.js'
